@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "airbnb",
+    "plugin:prettier/recommended" // Prettierの設定
+  ],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error" // Prettierが違反した場合はエラーとして扱う
+  }
+}
