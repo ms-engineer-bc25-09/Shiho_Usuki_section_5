@@ -10,7 +10,7 @@ router.get('/monthly', (req: Request, res: Response) => {
   const reports: MonthlyReport[] = [];
 
   // 月ごとの計算ロジック
-  const groupedTransactions = transactions.filter(t => t.date.startsWith(year)).reduce((acc: any, t) => {
+  const groupedTransactions = transactions.filter(t => t.date.startsWith(year)).reduce((acc, t) => { //  typescriptでうまくいかなかったらreduce((acc:any, t)にもどす
     const month = t.date.substring(0, 7); // YYYY-MM
     if (!acc[month]) {
       acc[month] = { totalIncome: 0, totalExpense: 0 };
